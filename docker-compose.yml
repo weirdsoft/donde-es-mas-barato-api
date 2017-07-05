@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    image: nginx:1.13.1-alpine
+    links:
+      - api
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+  api:
+    image: node:8.1.2-alpine
+    links:
+      - db
+    volumes:
+      - ./:/opt/app
+    environment:
+      - PORT=80
+      - MONGO_URL=mongodb://db:27017/donde-es-mas-barato
+    entrypoint: /opt/app/entrypoint.sh
+    command: start
+  db:
+    image: mongo:3.4.5

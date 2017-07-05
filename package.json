@@ -1,0 +1,38 @@
+{
+  "name": "donde-es-mas-barato-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "env nodemon index.js",
+    "start-prod": "node index.js",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weirdsoft/donde-es-mas-barato-api.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weirdsoft/donde-es-mas-barato-api/issues"
+  },
+  "homepage": "https://github.com/weirdsoft/donde-es-mas-barato-api#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "eslint": "^4.1.1",
+    "nodemon": "^1.11.0",
+    "webpack": "^3.0.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
